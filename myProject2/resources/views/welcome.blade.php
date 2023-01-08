@@ -121,6 +121,8 @@
                             </a>
                         </div>
                     </div>
+                    <div><p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Doloremque, necessitatibus numquam ea accusamus, nulla nesciunt minima voluptate aspernatur porro velit, expedita beatae quas. A quam quia voluptatibus accusamus, voluptatem voluptates!</p></div>
+                    
 
                     <div class="ml-4 text-center text-sm text-gray-500 sm:text-right sm:ml-0">
                         Laravel v{{ Illuminate\Foundation\Application::VERSION }} (PHP v{{ PHP_VERSION }})
