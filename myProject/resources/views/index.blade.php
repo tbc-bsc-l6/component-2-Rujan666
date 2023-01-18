@@ -1,6 +1,15 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+<link
+    href="https://fonts.googleapis.com/css2?family=Ubuntu:wght@300;400&display=swap"
+    rel="stylesheet"
+/>
+<link rel="stylesheet" type="text/css" href="{{ asset('css/style.css') }}" >
+<link
+    rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
+/>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -22,27 +31,13 @@
         <a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
       </li>
       <li class="nav-item">
-        <a class="nav-link" href="#">Link</a>
-      </li>
-      <li class="nav-item">
         <a class="nav-link" href="login">Login</a>
       </li>
       <li class="nav-item">
-        <a class="nav-link" href="register">register</a>
-      </li>
-      <li class="nav-item dropdown">
-        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-          Dropdown
-        </a>
-        <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-          <a class="dropdown-item" href="#">Action</a>
-          <a class="dropdown-item" href="#">Another action</a>
-          <div class="dropdown-divider"></div>
-          <a class="dropdown-item" href="#">Something else here</a>
-        </div>
+        <a class="nav-link" href="register">Register</a>
       </li>
       <li class="nav-item">
-        <a class="nav-link disabled" href="#">Disabled</a>
+        <a class="nav-link" href="display">Products</a>
       </li>
     </ul>
     <form class="form-inline my-2 my-lg-0">
@@ -52,10 +47,40 @@
   </div>
 </nav>
 </div>
-<body>
+<div class="card-body">
+          @if (session('status'))
+                <div class="alert alert-success" role="alert">
+                     {{ session('status') }}
+                </div>
+          @endif
+          
   <div class="container">
-    <img class ="w-100"src="../img/laravel2.jpg" alt="no image found">
-  </div>   
+    <img class ="w-100"src="../img/book.jpg" alt="no image found">
+  </div>
+  <div class="container mt-5"> 
+    <div class="row text-center">
+      <div class="col-sm-4 border">
+        <img class="w-100"  src="../img/burn.jpg" alt="">
+        <h2>Lorem</h2>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Id libero maxime amet, et incidunt sapiente saepe laborum tenetur, neque consequuntur ab? Suscipit molestiae ea ex in vitae dolorem repellat! Nam!</p>
+      </div>
+      <div class="col-sm-4 border">
+        <img class="w-100"  src="../img/book.jpg" alt="">
+        <h2>Lorem</h2>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Id libero maxime amet, et incidunt sapiente saepe laborum tenetur, neque consequuntur ab? Suscipit molestiae ea ex in vitae dolorem repellat! Nam!</p>
+      </div>
+      <div class="col-sm-4 border">
+        <img class="w-100"  src="../img/business.jpg" alt="">
+        <h2>Lorem</h2>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Id libero maxime amet, et incidunt sapiente saepe laborum tenetur, neque consequuntur ab? Suscipit molestiae ea ex in vitae dolorem repellat! Nam!</p>
+      </div>      
+    </div>
+  </div>   -->
+    <!-- <div class="mt-5 text-center">
+      <h1>Lorem</h1>
+      <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Iusto reiciendis rerum qui minima accusamus blanditiis adipisci velit non, aliquid hic aliquam ea eum doloremque perspiciatis beatae vel sit! Cum, at.</p>
+    </div>
+  </div>
 </body>
 <!-- Footer-->
 <footer class="bg-light py-5">

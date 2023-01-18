@@ -1,8 +1,9 @@
 <?php
 
 use App\Http\Controllers\ProfileController;
+use App\Http\Controllers\product;
 use Illuminate\Support\Facades\Route;
-use App\http\Controllers\ShowController;
+
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -18,15 +19,20 @@ Route::get('/', function () {
     return view('index');
 });
 
-Route::get('show-auth-user',[ShowController::class,'show_auth_user']);
-Route::get('check-auth-user',[ShowController::class,'check_auth_user']);
-Route::get('/dashboard', function () {
-    return view('dashboard');
-})->middleware('auth');
-
 Route::get('/dashboard', function () {
     return view('dashboard');
 })->middleware(['auth', 'verified'])->name('dashboard');
+
+Route::get('/display', function(){
+    return view('display');
+})->middleware(['auth', 'is_admin'])->name('display');
+
+Route::get('/addproduct', [product::class, 'addproduct']);
+Route::get('/display', [product::class, 'display']);
+Route::post('/add', [product::class, 'add']);
+Route::get('/updateForm/{id}', [product::class, 'updateForm']);
+Route::put('/updateProduct/{id}', [product::class, 'updateProduct']);
+Route::delete('/delete/{id}', [product::class, 'delete']);
 
 Route::middleware('auth')->group(function () {
     Route::get('/profile', [ProfileController::class, 'edit'])->name('profile.edit');
@@ -35,3 +41,4 @@ Route::middleware('auth')->group(function () {
 });
 
 require __DIR__.'/auth.php';
+require __DIR__.'/admin.php';
