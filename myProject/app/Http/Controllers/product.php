@@ -8,11 +8,7 @@ use App\Models\Category;
 class product extends Controller
 {
     public function display(){
-        $products = Category::all();
-        return view('display',
-        [
-            'products' => $products
-        ]);
+        return view('display',['products' => Category::paginate(8)]);
     }
     public function addproduct(){
         $products = Category::all();
