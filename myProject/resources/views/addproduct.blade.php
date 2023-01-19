@@ -12,7 +12,7 @@
                     </div>
                     <div class="form-group col-md-6">
                         <label for="last_name">Last Name</label>
-                        <input type="text" class="form-control" id="last_name" placeholder="surname / band" name="last_name" required>
+                        <input type="text" class="form-control" id="last_name" placeholder="Last Name" name="last_name" required>
                     </div>
                 </div>
                 <div class="form-group">

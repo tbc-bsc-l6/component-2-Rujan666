@@ -28,7 +28,7 @@ class product extends Controller
 
     public function updateProduct(Request $request, $id){
         Category::findorFail($id)->update($request->all());
-        return redirect('/');
+        return redirect('/display');
     }
 
     public function add(Request $request){

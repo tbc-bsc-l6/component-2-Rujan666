@@ -15,12 +15,12 @@
 
 <x-app-layout>
 @include('header')
-    <div class="title">
+    <div class="display-4 text-center">
         <h1>Products</h1>
     </div>
     @if(auth()->check() && auth()->user()->is_admin == 1)
         <div class="container">
-            <a href="{{url('addproduct')}}" class="btn btn-primary mt-2 p-2">Add Product</a>
+            <a href="{{url('addproduct')}}" class="btn btn-danger mt-2 p-2 text-right">Add Product</a>
         </div>
     @endif
     <div class="align-items-center justify-content-center mt-5 pt-5">
@@ -28,7 +28,7 @@
             
             @foreach($products as $product)
                 <div class="row">
-                    <div class="col">
+                    <div class="col-12">
                     <div class="product">
                         <div class="product-header">
                             <img class="w-100" src="/img/{{$product->image}}" alt="" class="product-image" />

@@ -1,6 +1,9 @@
 @extends('layout')
 @section('layout')
     <form class="w-100 mt-5" method="POST" action="{{url('updateProduct',$products->id)}}" enctype="multipart/form-data">
+    <div class="h1 text-center">
+                Update Product
+            </div>
         @csrf
         @method('put')
         <div class="form-row">
