@@ -44,9 +44,6 @@
                                 </form>
                             </x-slot>
                         </x-dropdown>
-                    @else
-                        <button><a href="login" class="btn btn-primary btn-block m-3">Login</a></button>
-                        <button><a href="register" class="btn btn-secondary btn-block m-3">Signup</a></button>
                     @endif
                 </div>
             
@@ -91,9 +88,6 @@
                     </form>
                 </div>
             </div>
-        @else
-            <button><a href="login" class="btn btn-primary btn-block">Login</a></button>
-            <button><a href="register" class="btn btn-secondary btn-block">Signup</a></button>
         @endif
         
     </div>
